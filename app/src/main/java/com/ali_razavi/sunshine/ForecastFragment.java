@@ -85,7 +85,7 @@ public class ForecastFragment extends Fragment {
         /*
         * Create ArrayAdapter from string fake data.
         * */
-        ArrayAdapter<String> forecastAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview, forecastArray);
+        ArrayAdapter<String> forecastAdapter = new ArrayAdapter<>(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview, forecastArray);
 
         /*
         * Find ListView and attach forecastAdapter to it.
@@ -95,10 +95,4 @@ public class ForecastFragment extends Fragment {
 
         return listItemsView;
     }
-
-    /*
-    * My API code:
-    * http://api.openweathermap.org/data/2.5/forecast/daily?q=Mashhad&mode=json&units=metric&cnt=7&APPID=8ae76d3dfb9411b936a9575bf4179888
-    *
-    * */
 }

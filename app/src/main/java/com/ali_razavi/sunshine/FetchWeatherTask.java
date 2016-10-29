@@ -44,13 +44,6 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
             final String DAYS_PARAM = "cnt";
 
 
-            // Construct the URL for the OpenWeatherMap query
-            // Possible parameters are avaiable at OWM's forecast API page, at
-            // http://openweathermap.org/API#forecast
-            // String baseUrl = "http://api.openweathermap.org/data/2.5/forecast/daily?q=Mashhad&mode=json&units=metric&cnt=7";
-            // String apiKey = "&APPID=" + BuildConfig.OPEN_WEATHER_MAP_API_KEY;
-            // URL url = new URL(baseUrl.concat(apiKey));
-
             /*
             * Create openWeatherUri based on:
             *       http://api.openweathermap.org/data/2.5/forecast/daily?q=Mashahd&mode=json&units=metric&cnt=7&APPID=****MY API KEY****
@@ -100,7 +93,6 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {
                 // Stream was empty.  No point in parsing.
                 return null;
             }
-
             forecastJsonStr = buffer.toString();
             /*
             * Log JSON string
